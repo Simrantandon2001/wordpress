@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Categories</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600&display=swap');
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+            margin-left: 190px;
+            background-color: #F4EFFA;
+        }
+		#abc{
+margin-top: 200px;
+		}
+		#ab{
+			margin-top: 215px;
+		}
+		#abcd{
+			margin-top: 20px;
+		}
+        .container {
+            width: 1075px;
+            height: 800px;
+            flex-shrink: 0;
+            border-radius: 16px;
+            background: #F4EFFA;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .heading {
+            color: #5B066E;
+            text-align: center;
+            font-family: 'Mulish', sans-serif;
+            font-size: 71px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 72px; /* 101.408% */
+            letter-spacing: -2px;
+            margin: 0;
+        }
+        .slide-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: transform 0.5s ease-in-out;
+        }
+        .category-name {
+            color: #2E2F35;
+
+text-align: center;
+font-family: Mulish;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: 72px; /* 200% */
+letter-spacing: -2px;
+}
+.image-container {
+    position: relative;
+    display: flex;
+    align-items: end;
+    gap: 86px; /* Space between images */
+}
+
+        .image {
+            max-width: 100%;
+            border-radius: 16px;
+        }
+        .button {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border-radius: 9999px;
+            background: #000;
+            display: flex;
+            width: 56px;
+            height: 56px;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .nav-button {
+           
+            top: 50%;
+            transform: translateY(-50%);
+            background:#000;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        .nav-button.prev {
+            left: 10px;
+        }
+        .nav-button.next {
+            right: 10px;
+            margin-left:8px;
+        }
+		#sim{
+			display: flex;
+		}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Explore Categories</h1>
+        <div class="slide-container">
+            <div class="slide" id="slide1">
+                <div class="image-container">
+					
+						<img id="ab" src="https://solomonpress.in/wp-content/uploads/2024/06/prabhu-1.png" alt="Top Image 1" class="image">
+					
+				<div class="">
+                   <img id="bcd" src="https://solomonpress.in/wp-content/uploads/2024/06/prabhu-3.png" alt="Bottom Image 1" class="image1">
+				   <p class="category-name"> Category Name </p>
+				</div>
+                    <img id="ab"src="https://solomonpress.in/wp-content/uploads/2024/06/prabhu-4.png" alt="Bottom Image 1" class="image2">
+					<div id="sim">
+                        <button class="nav-button prev" onclick="prevSlide()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M9.04697 13.9093L8.35322 14.6031C8.05947 14.8968 7.58447 14.8968 7.29385 14.6031L1.21885 8.5312C0.925098 8.23745 0.925098 7.76245 1.21885 7.47183L7.29385 1.39683C7.5876 1.10308 8.0626 1.10308 8.35322 1.39683L9.04697 2.09058C9.34385 2.38745 9.3376 2.87183 9.03447 3.16245L5.26885 6.74995H14.2501C14.6657 6.74995 15.0001 7.08433 15.0001 7.49995V8.49995C15.0001 8.91558 14.6657 9.24995 14.2501 9.24995H5.26885L9.03447 12.8375C9.34072 13.1281 9.34697 13.6125 9.04697 13.9093Z" fill="white"/>
+                            </svg>
+                        </button>
+                        <button class="nav-button next" onclick="nextSlide()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M6.95303 13.9093L7.64678 14.6031C7.94053 14.8968 8.41553 14.8968 8.70615 14.6031L14.7811 8.5312C15.0749 8.23745 15.0749 7.76245 14.7811 7.47183L8.70615 1.39683C8.4124 1.10308 7.9374 1.10308 7.64678 1.39683L6.95303 2.09058C6.65615 2.38745 6.6624 2.87183 6.96553 3.16245L10.7311 6.74995H1.74985C1.33423 6.74995 1 7.08433 1 7.49995V8.49995C1 8.91558 1.33423 9.24995 1.74985 9.24995H10.7311L6.96553 12.8375C6.65928 13.1281 6.65303 13.6125 6.95303 13.9093Z" fill="white"/>
+                            </svg>
+                        </button>
+                    	</div>
+					
+                </div>
+               
+              
+            </div>
+            <div class="slide" id="slide2">
+                <div class="image-container">
+					
+						<img id="ab" src="https://solomonpress.in/wp-content/uploads/2024/06/prabhu-1.png" alt="Top Image 1" class="image">
+					
+				<div class="">
+                   <img id="bcd" src="https://solomonpress.in/wp-content/uploads/2024/06/prabhu-3.png" alt="Bottom Image 1" class="image1">
+				   <p class="category-name"> Category Name </p>
+				</div>
+                    <img id="ab"src="https://solomonpress.in/wp-content/uploads/2024/06/prabhu-4.png" alt="Bottom Image 1" class="image2">
+					<div id="sim">
+                        <button class="nav-button prev" onclick="prevSlide()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M9.04697 13.9093L8.35322 14.6031C8.05947 14.8968 7.58447 14.8968 7.29385 14.6031L1.21885 8.5312C0.925098 8.23745 0.925098 7.76245 1.21885 7.47183L7.29385 1.39683C7.5876 1.10308 8.0626 1.10308 8.35322 1.39683L9.04697 2.09058C9.34385 2.38745 9.3376 2.87183 9.03447 3.16245L5.26885 6.74995H14.2501C14.6657 6.74995 15.0001 7.08433 15.0001 7.49995V8.49995C15.0001 8.91558 14.6657 9.24995 14.2501 9.24995H5.26885L9.03447 12.8375C9.34072 13.1281 9.34697 13.6125 9.04697 13.9093Z" fill="white"/>
+                            </svg>
+                        </button>
+                        <button class="nav-button next" onclick="nextSlide()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M6.95303 13.9093L7.64678 14.6031C7.94053 14.8968 8.41553 14.8968 8.70615 14.6031L14.7811 8.5312C15.0749 8.23745 15.0749 7.76245 14.7811 7.47183L8.70615 1.39683C8.4124 1.10308 7.9374 1.10308 7.64678 1.39683L6.95303 2.09058C6.65615 2.38745 6.6624 2.87183 6.96553 3.16245L10.7311 6.74995H1.74985C1.33423 6.74995 1 7.08433 1 7.49995V8.49995C1 8.91558 1.33423 9.24995 1.74985 9.24995H10.7311L6.96553 12.8375C6.65928 13.1281 6.65303 13.6125 6.95303 13.9093Z" fill="white"/>
+                            </svg>
+                        </button>
+                    </div>
+					
+                </div>
+               
+              
+            </div>
+            <!-- Add more slides as needed -->
+            
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.style.transform = 'translateX(0)';
+                } else if (i < index) {
+                    slide.style.transform = 'translateX(-100%)';
+                } else {
+                    slide.style.transform = 'translateX(100%)';
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Initialize the first slide
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
